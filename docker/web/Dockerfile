@@ -11,7 +11,8 @@ COPY src/ /src
 
 RUN msbuild OldWebApi.csproj `
     /p:OutputPath=/out `
-    /p:DeployOnBuild=true
+    /p:DeployOnBuild=true `
+    /p:Configuration=Relelease
 
 RUN dir /out/_PublishedWebsites/OldWebApi
 
